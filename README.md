@@ -29,8 +29,7 @@ uv run python tests/test_basic.py
 ### Web Interface (Recommended)
 
 ```bash
-# Launch interactive web interface
-uv run python -m graphml_viewer.cli --interactive
+uv run streamlit run streamlit_app.py
 ```
 
 This opens a Streamlit app with tabs for visualization, exploration, analytics, and data export.
