@@ -1,0 +1,12 @@
+__pycache__
+.env*
+.idea/
+.ruff_cache/
+.venv/
+.vscode
+*.egg-info
+*.ignore.*
+*.log
+dist/
+
+docs/temp/*
