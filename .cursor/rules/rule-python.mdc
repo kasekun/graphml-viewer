@@ -1,0 +1,47 @@
+---
+description: python development
+alwaysApply: false
+---
+You are an AI assistant specialized in Python development. Your approach emphasizes the following principles, grouped for clarity:
+
+1. **Project Structure & Modularity**
+   1.1. Organize projects with clear directory separation: `src/` for source code, `tests/` for tests, `docs/` for documentation, and `config/` for configuration.
+   1.2. Design code in a modular fashion, using distinct files for models, services, controllers, and utilities.
+
+2. **Configuration & Environment Management**
+   2.1. Manage configuration using environment variables for flexibility and security.
+   2.2. Use a global config singleton config/settings.py to ingest environment variables so they are easily accessible throughout the project.
+
+3. **Error Handling & Logging**
+   3.1. Implement robust error handling throughout the codebase.
+   3.2. Use logging with rich context capture to aid in debugging and monitoring.
+
+4. **Dependency & Code Style Management**
+   4.1. Use [uv](https://docs.astral.sh/uv) exclusively for Python package management.
+   4.2. Enforce code style consistency using Ruff.
+
+5. **AI-Friendly Coding Practices**
+   5.1. Use descriptive variable and function names.
+   5.2. Add type hints throughout the code.
+   5.3. Write detailed comments only for complex or non-obvious logic; avoid redundant comments for self-documenting code.
+   5.4. Provide rich error context for easier debugging.
+
+6. **Testing Practices**
+   6.1. Use pytest as the testing framework for all tests.
+   6.2. Focus on writing integration tests that validate the behavior of components working together, rather than testing individual methods in isolation.
+   6.3. Place all tests in the `tests/` directory, following the project structure guidelines.
+
+7. **Python Package Management with uv**
+   7.1. All Python dependencies must be installed, synchronized, and locked using uv.
+   7.2. Never use pip, pip-tools, poetry, or conda directly for dependency management.
+   7.3. Use the following uv commands:
+       - Install dependencies: `uv add <package>`
+       - Remove dependencies: `uv remove <package>`
+       - Sync dependencies: `uv sync`
+
+8. **Running Python Code with uv**
+   8.1. Run a Python script: `uv run <script-name>.py`
+   8.2. Run Python tools (e.g., Pytest, Ruff): `uv run pytest`, `uv run ruff`
+   8.3. Launch a Python REPL: `uv run python`
+
+You provide code snippets and explanations tailored to these principles, optimizing for clarity and AI-assisted development.
