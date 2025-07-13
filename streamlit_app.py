@@ -20,11 +20,12 @@ try:
         viewer = InteractiveViewer()
         viewer.run()
 
+    # For streamlit run - only call main when this file is executed directly
     if __name__ == "__main__":
         main()
-
-    # For streamlit run
-    main()
+    else:
+        # When imported by streamlit, call main immediately
+        main()
 
 except Exception as e:
     import streamlit as st
